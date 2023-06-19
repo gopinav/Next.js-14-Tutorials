@@ -1,5 +1,6 @@
 import Link from "next/link";
-export default function ProductList({ productId = 100 }) {
+export default function ProductList() {
+  const productId = 100;
   return (
     <>
       <Link href="/">Home</Link>
