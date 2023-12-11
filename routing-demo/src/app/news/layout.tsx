@@ -1,25 +1,35 @@
+import Link from "next/link";
+
 export default function NewsLayout({
   children,
-  business,
   entertainment,
   sports,
+  weather,
   login,
 }: {
   children: React.ReactNode;
-  business: React.ReactNode;
   entertainment: React.ReactNode;
   sports: React.ReactNode;
+  weather: React.ReactNode;
   login: React.ReactNode;
 }) {
-  const isLoggedIn = false;
-  const news = (
+  const isLoggedIn = true;
+  return (
     <>
-      {children}
-      {business}
-      {entertainment}
-      {sports}
+      <span>
+        <Link href="/news">National news</Link>
+        <Link href="/news/global">Global news</Link>
+      </span>
+      {isLoggedIn ? (
+        <>
+          {children}
+          {entertainment}
+          {sports}
+          {weather}
+        </>
+      ) : (
+        { login }
+      )}
     </>
   );
-  const Component = isLoggedIn ? news : login;
-  return Component;
 }
