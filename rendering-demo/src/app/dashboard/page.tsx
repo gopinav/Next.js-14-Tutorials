@@ -1,9 +1,15 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 export default function DashboardPage() {
-  const searchParams = useSearchParams();
-  const search = searchParams.get("search");
-  return <div>DashboardPage {search}</div>;
+  const [name, setName] = useState("");
+
+  return (
+    <div>
+      <h1>Dashboard page</h1>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <p>Hello, {name}!</p>
+    </div>
+  );
 }
