@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "server-only": "^0.0.1"
+    "react-slick": "^0.30.2",
+    "server-only": "^0.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^20",
