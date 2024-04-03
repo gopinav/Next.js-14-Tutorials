@@ -7,5 +7,5 @@ export const serverSideFunction = () => {
      interact with a database,
      process confidential information`
   );
-  return "result";
+  return "server result";
 };
